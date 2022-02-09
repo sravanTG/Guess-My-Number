@@ -16,7 +16,7 @@ let againButton = document.querySelector(".again");
 let resetButton = document.querySelector(".reset");
 
 // number generation
-let generatedNumber = Math.trunc(Math.random() * 10) + 1;
+let generatedNumber = Math.trunc(Math.random() * 20) + 1;
 
 // functions
 
@@ -63,7 +63,7 @@ submitButton.addEventListener("click", function () {
 
 againButton.addEventListener("click", function () {
   myScore = 20;
-  generatedNumber = Math.trunc(Math.random() * 10) + 1;
+  generatedNumber = Math.trunc(Math.random() * 20) + 1;
   displayMessage(startMessage);
   document.querySelector(".score").textContent = "Score: " + myScore;
   document.querySelector(".secret-number").textContent = "?";
@@ -75,7 +75,7 @@ againButton.addEventListener("click", function () {
 resetButton.addEventListener("click", function name(params) {
   myScore = 20;
   myHighscore = 0;
-  generatedNumber = Math.trunc(Math.random() * 10) + 1;
+  generatedNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".score").textContent = "Score: " + 0;
   document.querySelector(".secret-number").textContent = "?";
   document.querySelector(".enter").value = "";
