@@ -1,0 +1,47 @@
+/* for screen lower than 650px viewport width. */
+
+@media only screen and (max-width: 650px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .again,
+  .reset {
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+  }
+
+  .secret-section,
+  .button-section {
+    width: 95%;
+  }
+
+  .ins {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .secret-box {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .enter {
+    font-size: 1rem;
+    height: 30px;
+    border-radius: 10px;
+  }
+  #main-heading {
+    font-size: 1rem;
+  }
+  header {
+    margin-bottom: 10px;
+  }
+  .submit,
+  .again,
+  .reset {
+    font-size: 1rem;
+  }
+}

@@ -2,7 +2,7 @@
 
 // messages
 let lowMessage = "wrong guess! your number is lower than mine!";
-let highmessage = "wrong guess! your nubmer is higher than mine!";
+let highmessage = "wrong guess! your number is higher than mine!";
 let correctMessage = "you guessed the correct Number!!!";
 let noNumberMesage = "you didn`t enter any number!";
 let lostMessage = "you lost the game!!!";
@@ -19,15 +19,23 @@ let resetButton = document.querySelector(".reset");
 let generatedNumber = Math.trunc(Math.random() * 10) + 1;
 
 // functions
+
+// this function picks a message from the above messages according to the conditions.
+
 const displayMessage = function (givenMessage) {
   document.querySelector(".warning").textContent = givenMessage;
 };
 
+// when clicked on the submit button
+
 submitButton.addEventListener("click", function () {
   const hisNumber = Number(document.querySelector(".enter").value);
-  console.log(hisNumber);
+
+  // if user pressed submit without giving an input.
   if (!hisNumber) {
     displayMessage(noNumberMesage);
+
+    // if the user number is matching with the computer number.
   } else if (hisNumber === generatedNumber) {
     displayMessage(correctMessage);
     document.querySelector(".secret-number").textContent = generatedNumber;
@@ -37,6 +45,8 @@ submitButton.addEventListener("click", function () {
       document.querySelector(".highscore").textContent =
         "Highscore: " + myHighscore;
     }
+
+    // if user number is greater than or less thon the computer number.
   } else if (hisNumber !== generatedNumber) {
     if (myScore > 1) {
       displayMessage(hisNumber > generatedNumber ? highmessage : lowMessage);
@@ -49,6 +59,8 @@ submitButton.addEventListener("click", function () {
   }
 });
 
+// when clicked on the again button.
+
 againButton.addEventListener("click", function () {
   myScore = 20;
   generatedNumber = Math.trunc(Math.random() * 10) + 1;
@@ -57,6 +69,8 @@ againButton.addEventListener("click", function () {
   document.querySelector(".secret-number").textContent = "?";
   document.querySelector(".enter").value = "";
 });
+
+// when clicked on the reset button.
 
 resetButton.addEventListener("click", function name(params) {
   myScore = 20;
