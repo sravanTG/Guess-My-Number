@@ -6,6 +6,9 @@ this is a basic game built with html, css and some javscript.
 i have linked all the project files in this repository. feel free to check out.
 you can contact me for more imformation reguarding the project.
 
+project link:
+https://sravantg.github.io/Guess-My-Number/
+
 concept of the game.
 
 every time you open the game, the computer is gonna generate itself a random number from 1 - 20.
